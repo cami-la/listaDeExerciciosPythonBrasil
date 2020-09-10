@@ -1,7 +1,7 @@
 //Make a program that asks for a note, between zero and ten. Show a message if the value is invalid and keep asking until the user enters a valid value.
 import java.util.Scanner;
 
-class EstruturaDeRepeticaoExerise001 {
+class EstruturaDeRepeticaoExercise001 {
   public static void main(String[] args) {
     Scanner scan = new Scanner (System.in);
     System.out.println();
