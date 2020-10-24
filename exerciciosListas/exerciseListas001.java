@@ -1,24 +1,29 @@
 // Make a program that reads a vetor of 5 integers numbers and display.
 import java.util.Scanner;
+import java.util.ArrayList;
 
 class ExerciseListas001 {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     System.out.println();
-
-    double[] numbers = new double[5];
-
-    for (int i = 0; i < 5; i++) {
-      System.out.print("Enter the position " + (i+1 ) + "o. of numbers vetor." );
-      numbers[i] = scan.nextDouble();
-    }
-    
-    for (int i = 0; i < 5; i++) {
-      if (i == 4) {
-         System.out.print(numbers[i]);
-      } else {
-        System.out.print(numbers[i]+ ", ");
-      }
-    }
-  }
+	
+	ArrayList<Integer> array = new ArrayList<Integer>();
+	int lengthArray = 5;
+		
+		for (int i = 0; i < lengthArray; i++) {
+			System.out.print("Enter the number of " + (i+1) + "o. position: ");
+			array.add(scan.nextInt());
+		}
+		
+		System.out.print("\nArray: ");
+		System.out.println(array.toString());
+		
+		/*
+		System.out.print("\nArray: ");
+		for (Integer number : array) {
+			System.out.print(number + " ");
+		}
+		*/
+	}
 }
+
