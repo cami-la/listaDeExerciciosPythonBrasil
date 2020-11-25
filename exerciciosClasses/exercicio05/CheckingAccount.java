@@ -1,8 +1,8 @@
-class CheckingAccount {
+public class CheckingAccount {
 	//atributes
-	private int numberAccount;
-	private String name;
-	private double balance;
+	protected int numberAccount;
+	protected String name;
+	protected double balance;
 	
 	
 	//methods
@@ -30,23 +30,23 @@ class CheckingAccount {
 		}
 		
 
-		private int getNumberAccount() {
+		protected int getNumberAccount() {
 			return this.numberAccount;
 		}
 		
-		private void setBalance(double value) {
+		protected void setBalance(double value) {
 			this.balance = value;
 		}
 
-		private double getBalance() {
+		protected double getBalance() {
 			return this.balance;
 		}
 		
-		private void setName(String newName) {
+		protected void setName(String newName) {
 			this.name = newName;
 		}
 		
-		private String getName() {
+		protected String getName() {
 			return this.name;
 		}
 		
@@ -56,4 +56,15 @@ class CheckingAccount {
 			return "Checking Account: [" + "Name:" + this.getName() + ", Account Number: " + this.getNumberAccount() + ", Balance: " + this.getBalance() + "]";
 		}
 		
+		@Override
+		public boolean equals(Object obj) {
+			if (obj instanceof CheckingAccount) {
+				CheckingAccount any = (CheckingAccount) obj;
+				return this.numberAccount == any.getNumberAccount();
+			} else {
+				return false;
+			}
+		}
+		
 }
+
